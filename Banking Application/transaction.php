@@ -64,42 +64,24 @@
     // connecting to the database
     include 'Component/db_connection.php';
 
-    $sender_name = $_POST['sender-name'];
-    $receiver_name = $_POST['receiver-name'];
+    $sender_acount_no = $_POST['sender-ac'];
+    $receiver_acount_no = $_POST['receiver-ac'];
     $Amount = $_POST['Amount'];
 
-    // Check whether the user exists
-    $userexists = "SELECT * FROM `customer` c 
-    INNER JOIN `Transaction_Log` t 
-    ON c.name = t.receivername 
-    WHERE '$receiver_name' = c.name";
-    $result = mysqli_query($conn, $userexists);
-    $row_exists = mysqli_num_rows($result);
+    $sql = "INSERT INTO `Transaction_Log` (`sender_Account_no`, `Receiver_Account_no`, `AMOUNT`) VALUES ('$sender_acount_no ', '$receiver_acount_no', '  $Amount')";
+    $result = mysqli_query($conn, $sql);
 
-    if ($row_exists == 0) {
-      // the user doesnot exists
-      echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-          <strong class="text-black">Error!</strong> This user <strong class="text-black">' . $receiver_name . ' </strong> does not exists
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>';
-    } else {
-      // if user(receiver) exists
-      // Submit data to database
-      // Sql query to be executed
-      $sql = "INSERT INTO `Transaction_Log` (`SENDERNAME`, `RECEIVERNAME`, `AMOUNT`) VALUES ('$sender_name ', '$receiver_name', '  $Amount')";
-      $result = mysqli_query($conn, $sql);
-
-      if ($result) {
-        echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-      <strong class="text-black">Success!</strong> Successfully Transfer money to <strong class="text-black">' . $receiver_name . ' </strong>.
+    if ($result) {
+      echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong class="text-black">Success!</strong> Successfully Transfer money to <strong class="text-black">' . $receiver_acount_no . ' </strong>.
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>';
-      } else {
-        echo 'The record was not save successfully:' . mysqli_error($conn);
-      }
+    } else {
+      echo 'The record was not save successfully:' . mysqli_error($conn);
     }
-
   }
+
+
 
   ?>
   <!-- =================== customer details  ================== -->
@@ -155,14 +137,14 @@
               <form action="transaction.php" method="POST">
                 <div class="row">
                   <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 align-items-start">
-                    <label for="sender-name" class="form-label amount-label">Sender Account No</label>
-                    <input name="sender-name" type="text" class="form-control shadow-none amount-input" id="sender-name"
+                    <label for="sender-ac" class="form-label amount-label">Sender Account No</label>
+                    <input name="sender-ac" type="number" class="form-control shadow-none amount-input" id="sender-ac"
                       placeholder="Sender Name" required />
                   </div>
                   <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 align-items-start">
-                    <label for="receiver-name" class="form-label amount-label">Receiver Name</label>
-                    <input name="receiver-name" type="text" class="form-control shadow-none amount-input"
-                      id="receiver-name" placeholder="Enter Receiver name" required />
+                    <label for="receiver-ac" class="form-label amount-label">Receiver Account no</label>
+                    <input name="receiver-ac" type="number" class="form-control shadow-none amount-input"
+                      id="receiver-ac" placeholder="Enter Receiver name" required />
                   </div>
                   <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 align-items-start">
                     <label for="Amount" class="form-label">Amount </label>
