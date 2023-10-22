@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;700&display=swap");
+
+:root {
+  --bs-body-font-family: "Signika Negative";
+}
+.html {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+.bg-image {
+  background-image: url("https://plus.unsplash.com/premium_photo-1661320935370-620abc7f178d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80");
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.image-overlay {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(7, 11, 41, 0.758);
+}
+*p {
+  font-size: 30px;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.nav-link {
+  color: white;
+}
+.nav-item a:hover {
+  color: rgb(4, 142, 247);
+  transition: 0.5s;
+}
+.text-blue {
+  color: rgb(4, 142, 247);
+}
+/* =============== MAIN SECTION */
+
+#main-section {
+  margin-top: 10vh;
+  background-color: aqua;
+}
+.col-left {
+  color: aliceblue;
+}
+.col-right {
+  color: aliceblue;
+}
+
+img {
+  max-width: 90%;
+  height: auto;
+}
+.rotate-image {
+  width: 90%;
+}
+.fix {
+  overflow: hidden;
+}
+.container-main {
+  /* margin-top: 15vh; */
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.top-img {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 23%;
+  height: 25%;
+  z-index: 2;
+}
+.start-button {
+  border: 1px solid rgb(4, 142, 247);
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2vw;
+  font-weight: 700;
+  margin-top: 20px;
+  padding: 12px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.4s ease 0s;
+  z-index: 2;
+  background: rgb(4, 142, 247);
+  width: 160px;
+  border-radius: 2px;
+}
+.start-button:hover {
+  background-color: transparent;
+  color: rgb(4, 142, 247);
+}
+
+.btn-layer a {
+  text-decoration: none;
+}
+@media (max-width: 576px) {
+  /*mobile device (xtra small) */
+  .top-img {
+    position: absolute;
+    top: 16%;
+    left: 47%;
+    width: 49%;
+    height: 27%;
+    z-index: 2;
+  }
+  .container-main {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: px) {
+  /* Medium*/
+  .top-img {
+    position: absolute;
+    top: 15%;
+    left: 49%;
+    width: 24%;
+    height: 27%;
+    z-index: 2;
+  }
+}
+@media (min-width: 992px) and (max-width: 1269px) {
+  .top-img {
+    position: absolute;
+    top: 20%;
+    left: 48%;
+    width: 22%;
+    height: 27%;
+    z-index: 2;
+  }
+}
+
+/* ================================== CREATE USERS PAGE STYLING ================================ */
+
+.bg-image-cu {
+  background-image: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.image-overlay-cu {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(7, 11, 41, 0.758);
+}
+.box {
+  margin-top: 5vw !important;
+  height: 65vh;
+  width: 40vw;
+  /* border: 2px solid white; */
+  background-color: rgb(27, 38, 84);
+}
+.rectangle {
+  width: 100%;
+  height: 13%;
+}
+.text-cu {
+  font-weight: 600;
+}
+
+.create-user label {
+  font-weight: 600;
+  font-size: 16px;
+  color: #ddd;
+  text-transform: capitalize;
+}
+.create-user .form-control {
+  border: 1px solid #f1f1f1;
+  background: #fff;
+  border-radius: 0px;
+}
+#basic-addon2 {
+  background-color: rgb(4, 142, 247);
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  border-radius: 0px;
+}
+.select-option {
+  background-color: rgb(4, 142, 247);
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  border-radius: 0px;
+}
+.form-select {
+  background-color: rgb(4, 142, 247);
+  background-image: url("./Images/arrow-204-16.png");
+  border-radius: 0px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  text-align: center;
+}
+option {
+  background-color: rgb(27, 38, 84);
+  border: none;
+  cursor: pointer !important;
+  outline: none;
+}
+.button {
+  width: 50%;
+  color: #fff;
+  border: 1px solid #17aac9;
+  padding: 5px;
+  font-size: 1.3vw;
+  background: #17aac9;
+  font-weight: 600;
+  transition: all 0.4s ease-in-out;
+}
+.button:hover {
+  background: transparent;
+  color: #17aac9;
+}
+
+/* ================================== ALL USER ================================ */
+
+.au-box {
+  margin-top: 3vw !important;
+  height: 75vh;
+  width: 60vw;
+  background-color: rgb(27, 38, 84);
+}
+
+table tr td,
+table tr th {
+  background-color: rgb(27, 38, 84) !important;
+  color: white !important;
+}
+table tr td {
+  background-color: rgb(27, 38, 84) !important;
+  color: white !important;
+}
+/* table tbody tr:hover td {
+    background-color: rgba(4, 142, 247, 0.409)!important; 
+} */
+table thead tr th {
+  background-color: rgba(213, 219, 224, 0.89) !important;
+  color: black !important;
+}
+
+/* ================================== TRANSFER MONEY ================================ */
+
+.tm-box {
+  margin-top: 3vw !important;
+  height: 75vh;
+  width: 70vw;
+  background-color: rgb(27, 38, 84);
+}
+.btn-transfer {
+  max-width: 45%;
+  color: #fff;
+  border: 1px solid rgb(4, 142, 247);
+  padding: 5px;
+  font-size: 1vw;
+  background: rgb(4, 142, 247);
+  transition: all 0.4s ease-in-out;
+  font-weight: 600;
+}
+.btn-transfer:hover {
+  color: rgb(4, 142, 247);
+}
+.alert strong .text-black {
+  color: black;
+}
+
+/* ======================== TRANSACTION =================== */
+.container-customer {
+  background-color: rgb(7, 11, 41);
+}
+.user-detail-box {
+  background-color: rgb(27, 38, 84);
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.profile-content img {
+  display: block;
+  border-radius: 50%;
+  /* border: 2px solid #f5f5f5; */
+  margin: 0px auto 15px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.user-profile {
+  margin-top: 10px !important;
+}
+.profile-content i,
+.amount-content i,
+.card-content i {
+  display: block;
+  font-size: 40px;
+  border: 2px solid #1ba8c6;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  line-height: 80px;
+  border-radius: 50%;
+}
+.help-content img {
+  display: block;
+  border: 2px solid #1ba8c6;
+  width: 100px;
+  height: 100px;
+  margin: 0px auto 0px;
+  line-height: 90px;
+  border-radius: 50%;
+  padding: 10px 10px;
+}
+.text-help {
+  font-size: 1.5rem;
+  transition: 0.5s;
+}
+.text-help:hover {
+  color: rgb(4, 142, 247);
+}
+.transaction-cont {
+  background-color: rgb(27, 38, 84);
+}
+.text-send-money {
+  color: white;
+  background: #1ba8c6;
+}
+.text-top {
+  background-color: #17aac9;
+  padding: 10px;
+  margin: 0;
+}
+.text-white {
+  text-align: start;
+  font-weight: 600;
+}
+.amount-label {
+  margin-bottom: 5px;
+}
+.amount-input {
+  background: transparent;
+  color: white;
+}
+.amount-input::placeholder {
+  color: #17aac9;
+  font-weight: lighter;
+}
+.form-container .row .align-items-start {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.text-money {
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+.user-name {
+  font-size: 1.3rem;
+}
+.need-help {
+  cursor: pointer;
+}
+html {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
